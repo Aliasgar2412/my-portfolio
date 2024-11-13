@@ -4,6 +4,10 @@ import myImage from '../../images/contactimage.jpg'
 import Navbar from "../Header/Navbar";
 import { useRef, useState } from "react";
 import Swal from "sweetalert2";
+import GitHubIcon from '@material-ui/icons/GitHub';
+import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
+import EmailIcon from '@material-ui/icons/Email';
+import { Link } from "react-router-dom";
 
 
 export default function Contact() {
@@ -17,49 +21,53 @@ export default function Contact() {
 
     function onSubmit() {
         console.log('firstName_ref', firstName_ref)
-        // if (firstName === "") {
-        //     Swal.fire({
-        //         title: "Error.",
-        //         text: "Name cannot be empty!",
-        //         icon:'error',
-        //     }).then((event) => {
-        //         // if (event.isConfirmed) {
-        //             // setTimeout(() => {
-        //             //     firstName_ref.current.focus()    
-        //             // }, 800);
-        //             requestAnimationFrame(() => {
-        //                 firstName_ref.current?.focus();
-        //             });
-        //         // }
-        //     })
-        //     return
-        // }
-        // else if (email === "") {
-        //     Swal.fire({
-        //         title: "Email cannot be empty.",
-        //     })
-        //     return
-        // }
-        // else if (message === "") {
-        //     Swal.fire({
-        //         title: "Message cannot be empty.",
-        //     })
-        //     return
-        // }
-        // else{
-        Swal.fire({
-            title: "Success.",
-            icon: 'success',
-            text: "Your Response has been submitted.",
-        }).then((event) => {
-            if (event.isConfirmed) {
-                setFirstName('')
-                setemail('')
-                setmessage('')
-            }
-        })
-        return
-        // }
+        if (firstName === "") {
+            Swal.fire({
+                title: "Error.",
+                text: "Name cannot be empty!",
+                icon: 'error',
+            }).then((event) => {
+                // if (event.isConfirmed) {
+                // setTimeout(() => {
+                //     firstName_ref.current.focus()    
+                // }, 800);
+                requestAnimationFrame(() => {
+                    firstName_ref.current?.focus();
+                });
+                // }
+            })
+            return
+        }
+        else if (email === "") {
+            Swal.fire({
+                title: "Email cannot be empty.",
+            })
+            return
+        }
+        else if (message === "") {
+            Swal.fire({
+                title: "Message cannot be empty.",
+            })
+            return
+        }
+        else {
+            Swal.fire({
+                title: "Success.",
+                icon: 'success',
+                text: "Your Response has been submitted.",
+            }).then((event) => {
+                if (event.isConfirmed) {
+                    setFirstName('')
+                    setemail('')
+                    setmessage('')
+                }
+            })
+            return
+        }
+    }
+
+    function openGit(){
+        window.open("https://github.com/Aliasgar2412", '_blank');
     }
 
     return (
@@ -76,7 +84,7 @@ export default function Contact() {
                 <Grid item sm={6}>
                     <div style={{ marginLeft: "1.2rem" }}>
                         <Typography variant='h5' component='h6' align='left' className={classes.headingDesc}>
-                            Email ID :
+                            Email ID <EmailIcon />
                         </Typography>
                         <br />
                         <Typography variant='body1' component='h6' align='left' className={classes.educationDet}>
@@ -86,11 +94,21 @@ export default function Contact() {
                         </Typography>
                         <br />
                         <Typography variant='h5' component='h6' align='left' className={classes.headingDesc}>
-                            Mobile Number :
+                            Mobile Number <PhoneAndroidIcon />
                         </Typography>
                         <br />
                         <Typography variant='body1' component='h6' align='left' className={classes.educationDet}>
                             9820716710
+                        </Typography>
+                        <br />
+                        <Typography variant='h5' component='h6' align='left' className={classes.headingDesc}>
+                            GitHub <GitHubIcon />
+                        </Typography>
+                        <br />
+                        <Typography variant='body1' component='h6' align='left' className={classes.educationDet}>
+                            <Link onClick={() => openGit()}>
+                                https://github.com/Aliasgar2412
+                            </Link>
                         </Typography>
                         <br />
                     </div>
