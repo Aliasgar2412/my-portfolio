@@ -1,16 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-import Header from './Components/Header/Header';
-import About from './Components/About/About';
-import { Fragment, useEffect, useRef } from 'react';
-import { BrowserRouter, Link, Route, Router, Routes } from 'react-router-dom';
-import Contact from './Components/Contact/Contact';
-import Experience from './Components/Experience/Experience';
-import Project from './Components/Project/Project';
-import ScrollToTopButton from './Components/ScrollToTop';
+import logo from "./logo.svg";
+import "./App.css";
+import Header from "./Components/Header/Header";
+import About from "./Components/About/About";
+import { Fragment, useEffect, useRef } from "react";
+import { BrowserRouter, Link, Route, Router, Routes } from "react-router-dom";
+import Contact from "./Components/Contact/Contact";
+import Experience from "./Components/Experience/Experience";
+import Project from "./Components/Project/Project";
+import ScrollToTopButton from "./Components/ScrollToTop";
+import SkillsPage from "./Components/Skills/Skills";
 
 function App() {
-
   const formRef = useRef(null);
 
   return (
@@ -36,20 +36,21 @@ function App() {
           <Link to="/contact">Go to contact Page</Link>
         </nav> */}
 
-
       <BrowserRouter>
         <Routes>
-
-
-          <Route path="/" element={
-            <>
-              <Header />
-              <About />
-              <Experience />
-              <Project />
-              <Contact />
-            </>
-          } />
+          <Route
+            path="/"
+            element={
+              <>
+                <Header />
+                <About />
+                <Experience />
+                <SkillsPage />
+                <Project />
+                <Contact />
+              </>
+            }
+          />
           {/* <Route path="/about" Component={About} />
             <Route path="/experience" Component={Experience} />
             <Route path="/contact" Component={Contact} /> */}

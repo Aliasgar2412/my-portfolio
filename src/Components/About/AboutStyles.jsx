@@ -1,49 +1,78 @@
-import { makeStyles } from "@material-ui/core";
-import { Theme } from "../Theme";
-
+import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
-    section: {
-        backgroundColor: `${Theme.colors.base1} !important`,
-        padding: theme.spacing(10, 0, 8, 0)
-    },
-    divider: {
-        width: '65px',
-        height: '4px',
-        backgroundColor: Theme.colors.primary
-    },
-    responsiveImg: {
-        width: '100%',
-        height: 'auto'
-    },
-    sectionHeading: {
-        fontSize: '3rem',
-        color: '#257180',
-        fontWeight: 'bold'
-    },
-    sectionDesc: {
-        fontSize: '1.5rem',
-        color: 'black',
-        fontFamily: 'Times New Roman'
-    },
-    headingDesc: {
-        fontSize: '2rem',
-        color: '#257180',
-        fontWeight: 'bold',
-        textDecoration: 'underline'
-    },
-    educationDet: {
-        fontSize: '1.5rem',
-        color: 'black',
-        // fontWeight:'bold',
-        // textDecoration:'underline'
-    },
-    marginGrid:{
-        // margin:'20px'
-        marginLeft:'20px'
-    },
-    formLabel:{
-        fontSize: '1.5rem',
-        color: 'black',
-    }
-}))
+  root: {
+    height: "100vh",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    overflow: "hidden",
+    padding: "0",
+    backgroundColor: "#f5f5f5",
+  },
+  section: {
+    padding: theme.spacing(5),
+    maxWidth: "1200px",
+    margin: "0 auto",
+    backgroundColor: "#fff",
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+    borderRadius: "8px",
+    overflow: "hidden",
+  },
+  gridContainer: {
+    display: "flex",
+    justifyContent: "center",
+  },
+  imageWrapper: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: theme.spacing(3),
+  },
+  responsiveImg: {
+    width: "100%",
+    maxWidth: "250px",
+    borderRadius: "50%",
+    objectFit: "cover",
+    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+  },
+  sectionHeading: {
+    fontSize: "3rem",
+    fontWeight: 600,
+    color: "#333",
+    marginBottom: theme.spacing(2),
+    textAlign: "left",
+    fontFamily: "'Roboto', sans-serif",
+  },
+  sectionDesc: {
+    fontSize: "1.2rem",
+    lineHeight: 1.8,
+    color: "#555",
+    marginBottom: theme.spacing(3),
+    fontFamily: "'Roboto', sans-serif",
+  },
+  subHeading: {
+    fontSize: "1.5rem",
+    fontWeight: 600,
+    color: "#333",
+    marginBottom: theme.spacing(1),
+    textTransform: "uppercase",
+    letterSpacing: "1px",
+  },
+  list: {
+    listStyleType: "none",
+    paddingLeft: "0",
+    marginBottom: theme.spacing(2),
+    fontFamily: "'Roboto', sans-serif",
+  },
+  boldText: {
+    fontWeight: "bold",
+    color: "#333",
+    fontSize: "1.2rem",
+  },
+  sectionDesc: {
+    fontSize: "1.2rem",
+    lineHeight: 1.6,
+    marginBottom: theme.spacing(3),
+  },
+}));
