@@ -12,6 +12,7 @@ import Navbar from '../Header/Navbar';
 import timeClockCalc from '../../images/time-clock-calculator-hero.webp';
 import vectorAccordion from '../../images/vectorAccordion.jpg';
 import zurico from '../../images/zurico.jpg';
+import todolist from '../../images/todolist.jpg';
 
 const useStyles = makeStyles({
     root: {
@@ -36,14 +37,21 @@ export default function Project() {
             Id: 'accordion',
             image: vectorAccordion,
             description: 'List of inputs and allowing to edit.',
-            url: 'https://accordion.netlify.app',
+            url: 'https://assessment-omega-rouge.vercel.app/',
         },
         {
             label: 'Zurico',
             Id: 'zurico',
             image: zurico,
             description: 'Shortcut code using Editor.',
-            url: 'https://zurico.netlify.app',
+            url: 'https://editorshortcut.vercel.app/',
+        },
+        {
+            label: 'ToDoList',
+            Id: 'todolist',
+            image: todolist,
+            description: 'A to do list.',
+            url: 'https://sdctodolist.vercel.app/',
         },
     ];
 
@@ -86,9 +94,9 @@ export default function Project() {
                         >
                             Link
                         </Button>
-                        <Button size="small" color="primary" onClick={() => openModalForPro(item)}>
+                        {/* <Button size="small" color="primary" onClick={() => openModalForPro(item)}>
                             About
-                        </Button>
+                        </Button> */}
                     </CardActions>
                 </Card>
             ))}
