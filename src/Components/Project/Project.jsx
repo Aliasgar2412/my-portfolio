@@ -121,7 +121,7 @@ export default function Project() {
 
   return (
     <div id="project" className={classes.mainWrapper}>
-      <Navbar />
+      {/* <Navbar /> */}
       <Typography className={classes.title}>My Projects</Typography>
       <div className={classes.cardsWrapper}>
         {projectLinks.map((item, index) => (

@@ -1,7 +1,5 @@
 import { Box, Button, Grid, Paper, TextField, Typography } from "@material-ui/core";
 import { useStyles } from '../About/AboutStyles'
-import myImage from '../../images/contactimage.jpg'
-import Navbar from "../Header/Navbar";
 import { useRef, useState } from "react";
 import Swal from "sweetalert2";
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -72,13 +70,10 @@ export default function Contact() {
 
     return (
         <Box className={classes.section} id='contact'>
-            <Navbar />
             <Typography variant='h4' align='center' className={classes.sectionHeading}>
                 Contact Me
             </Typography>
-            <br />
             <hr />
-            <br />
             <Grid container spacing={3}>
 
                 <Grid item sm={6}>
@@ -114,7 +109,7 @@ export default function Contact() {
                     </div>
                 </Grid>
 
-                <Grid item xs={6} sm={6}>
+                <Grid item xs={12} sm={6} lg={6}>
                     <Paper variant="outlined" style={{ width: '95%', paddingLeft: '10px' }} square>
                         <div>
                             <Typography variant='h5' component='h6' align='left' className={classes.formLabel}>
