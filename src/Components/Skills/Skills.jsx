@@ -73,7 +73,7 @@ const SkillsPage = () => {
         <div id="skills" className={classes.mainWrapper}>
             <Box
                 sx={{
-                    height: '100vh',
+                    height: '100%',
                     width: '100%',
                     display: 'flex',
                     flexDirection: 'column',
