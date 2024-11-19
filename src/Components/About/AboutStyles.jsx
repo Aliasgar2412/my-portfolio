@@ -31,7 +31,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   responsiveImg: {
     width: "100%",
-    maxWidth: "250px",
+    maxWidth: "200px",
     borderRadius: "50%",
     objectFit: "cover",
     boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",

@@ -14,7 +14,10 @@ export const useStyles = makeStyles((theme) => ({
   responsiveImg: {
     width: "100%",
     height: "auto",
-    borderRadius: "8px",
+    borderRadius: "50%",
+    // maxWidth: "200px",
+    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+    objectFit:'cover'
   },
   sectionHeading: {
     fontSize: "2rem",
@@ -28,8 +31,8 @@ export const useStyles = makeStyles((theme) => ({
   sectionDesc: {
     fontSize: "1rem",
     color: "black",
-    fontFamily: "Times New Roman",
-    lineHeight: 0.5,
+    // fontFamily: "Times New Roman",
+    // lineHeight: 0.5,
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.2rem",
     },
@@ -44,7 +47,7 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "1rem",
     color: "black",
     marginBottom: theme.spacing(2),
-    lineHeight: 1.6,
+    // lineHeight: 1.6,
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.2rem",
     },

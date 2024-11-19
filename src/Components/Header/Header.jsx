@@ -26,7 +26,6 @@ export default function Header() {
     <div id="home" style={{ height: "100vh" }}>
       <BubbleEffect />
       <Box className={classes.HeaderWrapper}>
-        <Navbar />
         <Box className={classes.HeaderContainer}>
           <Typography
             variant="h6"

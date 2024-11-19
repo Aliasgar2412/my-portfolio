@@ -9,6 +9,7 @@ import Experience from "./Components/Experience/Experience";
 import Project from "./Components/Project/Project";
 import ScrollToTopButton from "./Components/ScrollToTop";
 import SkillsPage from "./Components/Skills/Skills";
+import Navbar from "./Components/Header/Navbar";
 
 function App() {
   const formRef = useRef(null);
@@ -42,12 +43,13 @@ function App() {
             path="/"
             element={
               <>
+                <Navbar/>
                 <Header />
                 <About />
                 <Experience />
                 <SkillsPage />
                 <Project />
-                <Contact />
+                <Contact /> 
               </>
             }
           />
