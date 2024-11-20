@@ -36,6 +36,14 @@ export default function Contact() {
             });
             return;
         }
+        else if (!validateEmail(email)) {
+            Swal.fire({
+                title: "Error.",
+                text: "Please enter a valid email address!",
+                icon: 'error',
+            });
+            return;
+        }
         else if (message === "") {
             Swal.fire({
                 title: "Error.",
@@ -75,6 +83,11 @@ export default function Contact() {
                     icon: 'error',
                 });
             });
+    }
+
+    function validateEmail(email) {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
     }
 
     function openGit() {
